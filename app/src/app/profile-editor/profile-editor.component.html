@@ -1,1 +1,47 @@
-<p>profile-editor works!</p>
+<form [formGroup]="profileForm">
+  <div class="formMenu">
+    <div>
+      <label for="first-name">First Name: </label>
+      <input id="first-name"
+             type="text"
+             formControlName="firstName"
+             minlength="4"
+             [ngClass]="{error: controls.firstName.touched &&  controls.firstName.invalid }" >
+      <p *ngIf="controls.firstName.touched &&  controls.firstName.invalid" class="errortext" >поле обовязкове для заповнення</p>
+    </div>
+    <div>
+      <label for="last-name">Last Name: </label>
+      <input id="last-name"
+             type="text" formControlName="lastName"
+             [ngClass]="{error: controls.lastName.touched && controls.lastName.invalid }" >
+      <p *ngIf="controls.lastName.touched && controls.lastName.invalid" class="errortext" >поле обовязкове для заповнення</p>
+    </div>
+    <div>
+      <span>Adress:</span>
+      <label for="street">Street: </label>
+      <input id="street"
+             type="text" formControlName="street">
+    </div>
+    <div>
+      <label for="city">City: </label>
+      <input id="city"
+             type="text" formControlName="city">
+    </div>
+    <div>
+      <label for="state">State: </label>
+      <input id="state"
+             type="text" formControlName="state">
+    </div>
+    <div>
+      <label for="zip-code">Zip Code: </label>
+      <input id="zip-code"
+             type="text" formControlName="zip-code">
+    </div>
+    <div>
+      <p>Complete the form to enable button.</p>
+      <button type="button" (click)="onSubmit()">Submit</button>
+    </div>
+  </div>
+</form>
+
+

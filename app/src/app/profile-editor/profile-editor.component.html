@@ -14,28 +14,36 @@
       <input id="last-name"
              type="text" formControlName="lastName"
              [ngClass]="{error: controls.lastName.touched && controls.lastName.invalid }" >
-      <p *ngIf="controls.lastName.touched && controls.lastName.invalid" class="errortext" >поле обовязкове для заповнення</p>
+      <p *ngIf="controls.lastName.touched && controls.lastName.invalid" class="errortext">неправильно записана фамілія</p>
     </div>
     <div>
       <span>Adress:</span>
       <label for="street">Street: </label>
       <input id="street"
-             type="text" formControlName="street">
+             type="text" formControlName="street"
+             [ngClass]="{error: controls.street.touched && controls.street.invalid }" >
+      <p *ngIf="controls.street.touched && controls.street.invalid" class="errortext">неправильно вказано вулицю</p>
     </div>
     <div>
       <label for="city">City: </label>
       <input id="city"
-             type="text" formControlName="city">
+             type="text" formControlName="city"
+             [ngClass]="{error: controls.city.touched && controls.city.invalid}" >
+      <p *ngIf="controls.city.touched && controls.city.invalid" class="errortext">місто невказано</p>
     </div>
     <div>
       <label for="state">State: </label>
       <input id="state"
-             type="text" formControlName="state">
+             type="text" formControlName="state"
+             [ngClass]="{error: controls.state.touched && controls.state.invalid}">
+      <p *ngIf="controls.state.touched && controls.state.invalid" class="errortext">невказано назву держави</p>
     </div>
     <div>
       <label for="zip-code">Zip Code: </label>
       <input id="zip-code"
-             type="text" formControlName="zip-code">
+             type="text" formControlName="zip-code"
+             [ngClass]="{error: controls.zipcode.touched && controls.zipcode.invalid}">
+      <p *ngIf="controls.zipcode.touched && controls.zipcode.invalid" class="errortext">невказано zip-code</p>
     </div>
     <div>
       <p>Complete the form to enable button.</p>

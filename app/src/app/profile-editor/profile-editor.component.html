@@ -1,6 +1,6 @@
 <form [formGroup]="profileForm">
   <div class="formMenu">
-    <div>
+    <div class="form-group">
       <label for="first-name">First Name: </label>
       <input id="first-name"
              type="text"
@@ -39,9 +39,9 @@
       <p *ngIf="controls.state.touched && controls.state.invalid" class="errortext">невказано назву держави</p>
     </div>
     <div>
-      <label for="zip-code">Zip Code: </label>
-      <input id="zip-code"
-             type="text" formControlName="zip-code"
+      <label for="zipcode">Zip Code: </label>
+      <input id="zipcode"
+             type="text" formControlName="zipcode"
              [ngClass]="{error: controls.zipcode.touched && controls.zipcode.invalid}">
       <p *ngIf="controls.zipcode.touched && controls.zipcode.invalid" class="errortext">невказано zip-code</p>
     </div>

@@ -10,6 +10,7 @@ import { PriceComponent } from './price/price.component';
 import { NewsComponent } from './news/news.component';
 import { RouterModule, Routes } from "@angular/router";
 import { NavComponent } from './nav/nav.component';
+import { FooterComponent } from './footer/footer.component';
 
 const routes: Routes = [
   { path: '',redirectTo: '/home', pathMatch: 'full'},
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'news', component: NewsComponent},
   { path: 'price', component: PriceComponent},
   { path: 'contact', component: ContactComponent },
+  { path: 'footer', component: FooterComponent},
   ];
 
 @NgModule({
@@ -27,7 +29,8 @@ const routes: Routes = [
     ContactComponent,
     PriceComponent,
     NewsComponent,
-    NavComponent
+    NavComponent,
+    FooterComponent
   ],
 
   imports: [
